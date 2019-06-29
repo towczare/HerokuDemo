@@ -28,29 +28,29 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/")
-public class HomeController {
+public class DemoController {
 
-    private RecordRepository repository;
+    private DemoRecordRepository repository;
 
     @Autowired
-    public HomeController(RecordRepository repository) {
+    public DemoController(DemoRecordRepository repository) {
         this.repository = repository;
     }
 
     @RequestMapping(method = RequestMethod.GET)
     public String home(ModelMap model) {
-        List<Record> records = repository.findAll();
-        model.addAttribute("records", records);
-        model.addAttribute("insertRecord", new Record());
+        List<Demo> demos = repository.findAll();
+        model.addAttribute("demos", demos);
+        model.addAttribute("insertDemo", new Demo());
         return "home";
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public String insertData(ModelMap model, 
-                             @ModelAttribute("insertRecord") @Valid Record record,
+                             @ModelAttribute("insertDemo") @Valid Demo demo,
                              BindingResult result) {
         if (!result.hasErrors()) {
-            repository.save(record);
+            repository.save(demo);
         }
         return home(model);
     }
