@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS DEMO (
 	data varchar(255) not null
 );
 
+
 create sequence demo_sequence start with 1 increment by 1;
 
 insert into DEMO (data) values ('Hello SDA!');

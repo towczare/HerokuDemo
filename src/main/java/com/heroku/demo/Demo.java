@@ -16,6 +16,8 @@ public class Demo {
     @NotEmpty
     private String data;
 
+    private int age;
+
     public String getData() {
         return data;
     }
@@ -24,4 +26,11 @@ public class Demo {
         this.data = data;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
