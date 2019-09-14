@@ -8,22 +8,22 @@ import javax.persistence.Id;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-public class Demo {
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @NotEmpty
-    private String data;
+    private String name;
 
     private Integer age;
 
-    public String getData() {
-        return data;
+    public String getName() {
+        return name;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Integer getAge() {

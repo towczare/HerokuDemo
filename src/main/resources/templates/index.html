@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layouts/layout}"
+>
+<head>
+    <title>Demo page</title>
+</head>
+<body>
+<div layout:fragment="content" class="container">
+
+    <div class="jumbotron">
+        <h1>Sample Demo App</h1>
+        <p>Allows to add people.</p>
+        <p>
+            <a class="btn btn-lg btn-primary" th:href="@{/people}" role="button">See people list</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

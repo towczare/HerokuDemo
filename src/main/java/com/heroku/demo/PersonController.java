@@ -28,30 +28,40 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/")
-public class DemoController {
+public class PersonController {
 
-    private DemoRecordRepository repository;
+    private PersonRepository repository;
 
     @Autowired
-    public DemoController(DemoRecordRepository repository) {
+    public PersonController(PersonRepository repository) {
         this.repository = repository;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String home(ModelMap model) {
-        List<Demo> demos = repository.findAll();
-        model.addAttribute("demos", demos);
-        model.addAttribute("insertDemo", new Demo());
-        return "home";
+    @RequestMapping(value="/", method = RequestMethod.GET)
+    public String index() {
+        return "index";
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value="/people", method = RequestMethod.GET)
+    public String demos(ModelMap model) {
+        List<Person> people = repository.findAll();
+        model.addAttribute("people", people);
+        return "list";
+    }
+
+    @RequestMapping(value="/people/new", method = RequestMethod.GET)
+    public String home(ModelMap model) {
+        model.addAttribute("person", new Person());
+        return "add";
+    }
+
+    @RequestMapping(value="/people/new", method = RequestMethod.POST)
     public String insertData(ModelMap model, 
-                             @ModelAttribute("insertDemo") @Valid Demo demo,
+                             @ModelAttribute("person") @Valid Person person,
                              BindingResult result) {
         if (!result.hasErrors()) {
-            repository.save(demo);
+            repository.save(person);
         }
-        return home(model);
+        return "redirect:/people";
     }
 }

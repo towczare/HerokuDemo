@@ -1,9 +1,9 @@
 # Spring Boot Heroku Flyway Demo App
 
-Simple example showing how to connect [Spring Boot App](https://spring.io/projects/spring-boot) to [Heroku Database](https://data.heroku.com) with [Flyway library](https://flywaydb.org/) used as database versioning tool.
+Simple example showing how to connect [Spring Boot App](https://spring.io/projects/spring-boot) to [Heroku Database](https://name.heroku.com) with [Flyway library](https://flywaydb.org/) used as database versioning tool.
 
 ## Setup
-1. Create database using creator in [Heroku database](https://data.heroku.com)
+1. Create database using creator in [Heroku database](https://name.heroku.com)
 2. Open credential page for newly created database.
 
 ![.images/credentials.png](.images/credentials.png)
