@@ -16,7 +16,7 @@ public class Demo {
     @NotEmpty
     private String data;
 
-    private int age;
+    private Integer age;
 
     public String getData() {
         return data;
@@ -26,11 +26,11 @@ public class Demo {
         this.data = data;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 }
