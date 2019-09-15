@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class ThymeLeaf {
+public class ThymleafConfiguration {
+
     @Bean
     public LayoutDialect layoutDialect() {
         return new LayoutDialect();

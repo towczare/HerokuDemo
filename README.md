@@ -2,7 +2,45 @@
 
 Simple example showing how to connect [Spring Boot App](https://spring.io/projects/spring-boot) to [Heroku Database](https://name.heroku.com) with [Flyway library](https://flywaydb.org/) used as database versioning tool.
 
-## Setup
+## Deploying app to Heroku
+1. Create new application in Heroku console
+![personal_new.png](personal_new.png)
+![new_app.png](new_app.png)
+![new_app_heroku.png](new_app_heroku.png)
+2. Configure your github source, by searching project
+![search_github.png](search_github.png)
+![github_connect.png](github_connect.png)
+3. Enable automatic deploys, so each time pull request is merged, new version will be deployed.
+![automatic_deploys.png](automatic_deploys.png)
+4. Switch to addon tab and search postgres addon.
+![addons.png](addons.png)
+![search_addon_postgres.png](search_addon_postgres.png)
+![postgres2.png](postgres2.png)
+![free_postgres.png](free_postgres.png)
+5. Go back to deploy tab and deploy application.
+![deploy_branch.png](deploy_branch.png)
+6. Take a look on logs, if everything is fine.
+![deploy_logs.png](deploy_logs.png)
+7. Open your app, once it is successfully deployed.
+![open_app.png](open_app.png)
+
+## Configure elephantsql database
+
+1. Create account and database instance on [https://www.elephantsql.com/](https://www.elephantsql.com/)
+2. Prepare following env values:
+```
+JDBC_DATABASE_URL=jdbc:postgresql://rogue.db.elephantsql.com:5432/abcdefgh
+JDBC_DATABASE_PASSWORD=1234qwerweeweweedwr_4321gdfgdfdgd
+JDBC_DATABASE_USERNAME=abcdefgh
+```
+3. Paste them in env window in your IntelliJ IDE
+![ide.png](ide.png)
+4. Run your app.
+
+## Creating Heroku Postgres Database
+
+In case you want to create database for local purposes, follow below steps:
+
 1. Create database using creator in [Heroku database](https://name.heroku.com)
 2. Open credential page for newly created database.
 
