@@ -1,6 +1,14 @@
 # Spring Boot Heroku Flyway Demo App
 
-Simple example showing how to connect [Spring Boot App](https://spring.io/projects/spring-boot) to [Heroku Database](https://name.heroku.com) with [Flyway library](https://flywaydb.org/) used as database versioning tool.
+![.images/demo.png](.images/demo.png)
+
+Simple example project showing how to connect:
+ * [Spring Boot App](https://spring.io/projects/spring-boot)
+ * [Heroku Hosting](https://heroku.com)
+ * [Postgres Heroku Database](https://data.heroku.com)
+ * [Flyway library](https://flywaydb.org/) used as database versioning tool.
+ * [Thymeleaf + Thymeleaf Templates](https://www.thymeleaf.org/)
+
 
 ## Deploying app to Heroku
 1. Create new application in Heroku console
