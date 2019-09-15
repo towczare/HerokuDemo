@@ -2,6 +2,9 @@
 
 Simple example showing how to connect [Spring Boot App](https://spring.io/projects/spring-boot) to [Heroku Database](https://name.heroku.com) with [Flyway library](https://flywaydb.org/) used as database versioning tool.
 
+# Demo
+Application is available here ![https://pacific-shelf-35900.herokuapp.com/](https://pacific-shelf-35900.herokuapp.com/)
+
 ## Deploying app to Heroku
 1. Create new application in Heroku console
 ![.images/personal_new.png](.images/personal_new.png)
@@ -26,6 +29,8 @@ Simple example showing how to connect [Spring Boot App](https://spring.io/projec
 
 ## Configure elephantsql database
 
+This can be usefull for local development purposes, when we don't want to configure database localy. 
+
 1. Create account and database instance on [https://www.elephantsql.com/](https://www.elephantsql.com/)
 2. Prepare following env values:
 ```
@@ -37,7 +42,7 @@ JDBC_DATABASE_USERNAME=abcdefgh
 ![.images/ide.png](.images/ide.png)
 4. Run your app.
 
-## Creating Heroku Postgres Database
+## Conecting to database from IDE
 
 In case you want to create database for local purposes, follow below steps:
 
