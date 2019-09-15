@@ -13,6 +13,8 @@ Simple example project showing how to connect:
 # Demo
 Application is available here ![https://pacific-shelf-35900.herokuapp.com/](https://pacific-shelf-35900.herokuapp.com/)
 
+# Production on Heroku
+
 ## Deploying app to Heroku
 1. Create new application in Heroku console
 ![.images/personal_new.png](.images/personal_new.png)
@@ -34,6 +36,8 @@ Application is available here ![https://pacific-shelf-35900.herokuapp.com/](http
 ![.images/deploy_logs.png](.images/deploy_logs.png)
 7. Open your app, once it is successfully deployed.
 ![.images/open_app.png](.images/open_app.png)
+
+# Local Development
 
 ## Configure elephantsql database
 
@@ -76,3 +80,18 @@ jdbc:postgresql://ec2-ho-stn-num-bers.eu-west-1.compute.amazonaws.com:5432/datab
 
 6. Setup your configuration in environment variables as following:
 ![.images/envs_idea.png](.images/envs_idea.png)
+
+## Cloudinary service integration
+
+Application uses third party service responsible for storing images.
+
+1. Go to [https://cloudinary.com/](https://cloudinary.com/) and register account.
+2. Get credentials to your storage.
+![.images/cloudinary_console.png](.images/cloudinary_console.png)
+3. You need to provide following configuration to make it working:
+```
+CLOUDINARY_CLOUD_NAME=cloudname
+CLOUDINARY_API_KEY=apikeyapikey
+CLOUDINARY_API_SECRET=secretsecretsecretsecret
+```
+4. Include it in your environments before running app the same way, you do for DB.

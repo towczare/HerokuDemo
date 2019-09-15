@@ -14,13 +14,18 @@
 
         <div class="row">
             <div class="col-md-12 col-lg-6">
-                <form th:object="${person}" method="POST">
+                <form th:object="${person}" enctype="multipart/form-data" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input id="name" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{name}" />
 
                         <label for="age">Age</label>
                         <input type="number" step="1" id="age" class="form-control" th:field="*{age}" />
+
+
+                        <label for="image">Age</label>
+                        <input type="file" id="image" name="image" class="form-control"/>
+
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>

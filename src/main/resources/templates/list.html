@@ -26,7 +26,7 @@
                     <tr th:each="person : ${people}">
                         <td th:text="${person.name}">Some text</td>
                         <td th:text="${person.age}">43</td>
-                        <td><img th:src="${'https://api.adorable.io/avatars/50/'+person.avatarHash}" /></td>
+                        <td><img th:width="50" th:src="${person.imageUrl}" /></td>
                     </tr>
                     </tbody>
                 </table>

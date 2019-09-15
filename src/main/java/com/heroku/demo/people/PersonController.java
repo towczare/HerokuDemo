@@ -1,7 +1,6 @@
-package com.heroku.demo;
+package com.heroku.demo.people;
 
 import javax.validation.Valid;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class PersonController {
 
-    private PersonRepository repository;
+    private PersonService personService;
 
     @Autowired
-    public PersonController(PersonRepository repository) {
-        this.repository = repository;
+    public PersonController(PersonService personService) {
+        this.personService = personService;
     }
 
     @RequestMapping(value="/", method = RequestMethod.GET)
@@ -29,23 +28,22 @@ public class PersonController {
 
     @RequestMapping(value="/people", method = RequestMethod.GET)
     public String demos(ModelMap model) {
-        List<Person> people = repository.findAll();
-        model.addAttribute("people", people);
+        model.addAttribute("people", personService.getPeople());
         return "list";
     }
 
     @RequestMapping(value="/people/new", method = RequestMethod.GET)
     public String home(ModelMap model) {
-        model.addAttribute("person", new Person());
+        model.addAttribute("person", new PersonForm());
         return "add";
     }
 
     @RequestMapping(value="/people/new", method = RequestMethod.POST)
     public String insertData(ModelMap model, 
-                             @ModelAttribute("person") @Valid Person person,
+                             @ModelAttribute("person") @Valid PersonForm person,
                              BindingResult result) {
         if (!result.hasErrors()) {
-            repository.save(person);
+            personService.save(person);
         }
         return "redirect:/people";
     }
