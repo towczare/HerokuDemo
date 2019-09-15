@@ -4,25 +4,25 @@ Simple example showing how to connect [Spring Boot App](https://spring.io/projec
 
 ## Deploying app to Heroku
 1. Create new application in Heroku console
-![personal_new.png](personal_new.png)
-![new_app.png](new_app.png)
-![new_app_heroku.png](new_app_heroku.png)
+![.images/personal_new.png](.images/personal_new.png)
+![.images/new_app.png](.images/new_app.png)
+![.images/new_app_heroku.png](.images/new_app_heroku.png)
 2. Configure your github source, by searching project
-![search_github.png](search_github.png)
-![github_connect.png](github_connect.png)
+![.images/search_github.png](.images/search_github.png)
+![.images/github_connect.png](.images/github_connect.png)
 3. Enable automatic deploys, so each time pull request is merged, new version will be deployed.
-![automatic_deploys.png](automatic_deploys.png)
+![.images/automatic_deploys.png](.images/automatic_deploys.png)
 4. Switch to addon tab and search postgres addon.
-![addons.png](addons.png)
-![search_addon_postgres.png](search_addon_postgres.png)
-![postgres2.png](postgres2.png)
-![free_postgres.png](free_postgres.png)
+![.images/addons.png](.images/addons.png)
+![.images/search_addon_postgres.png](.images/search_addon_postgres.png)
+![.images/postgres2.png](.images/postgres2.png)
+![.images/free_postgres.png](.images/free_postgres.png)
 5. Go back to deploy tab and deploy application.
-![deploy_branch.png](deploy_branch.png)
+![.images/deploy_branch.png](.images/deploy_branch.png)
 6. Take a look on logs, if everything is fine.
-![deploy_logs.png](deploy_logs.png)
+![.images/deploy_logs.png](.images/deploy_logs.png)
 7. Open your app, once it is successfully deployed.
-![open_app.png](open_app.png)
+![.images/open_app.png](.images/open_app.png)
 
 ## Configure elephantsql database
 
@@ -34,7 +34,7 @@ JDBC_DATABASE_PASSWORD=1234qwerweeweweedwr_4321gdfgdfdgd
 JDBC_DATABASE_USERNAME=abcdefgh
 ```
 3. Paste them in env window in your IntelliJ IDE
-![ide.png](ide.png)
+![.images/ide.png](.images/ide.png)
 4. Run your app.
 
 ## Creating Heroku Postgres Database
