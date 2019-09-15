@@ -15,6 +15,10 @@ public class Person {
 
     private Integer age;
 
+    public String getAvatarHash() {
+        return name + age;
+    }
+
     public String getName() {
         return name;
     }

@@ -19,12 +19,14 @@
                     <tr>
                         <th>Names</th>
                         <th>Age</th>
+                        <th>Avatar</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr th:each="person : ${people}">
                         <td th:text="${person.name}">Some text</td>
                         <td th:text="${person.age}">43</td>
+                        <td><img th:src="${'https://api.adorable.io/avatars/50/'+person.avatarHash}" /></td>
                     </tr>
                     </tbody>
                 </table>
