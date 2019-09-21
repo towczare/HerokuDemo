@@ -11,7 +11,7 @@ Simple example project showing how to connect:
 
 
 # Demo
-Application is available here ![https://pacific-shelf-35900.herokuapp.com/](https://pacific-shelf-35900.herokuapp.com/)
+Application is available here [https://pacific-shelf-35900.herokuapp.com/](https://pacific-shelf-35900.herokuapp.com/)
 
 # Production on Heroku
 
