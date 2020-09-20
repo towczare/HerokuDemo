@@ -2,8 +2,15 @@ package com.heroku.demo.people;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+
 public class PersonForm {
+    @NotBlank(message = "Imię nie może być puste")
     private String name;
+    @Min(value = 1, message = "Wiek musi być z przedziału 1 - 100")
+    @Max(value = 110, message = "Wiek musi być z przedziału 1 - 100")
     private Integer age;
     private MultipartFile image;
 

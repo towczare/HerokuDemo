@@ -44,6 +44,8 @@ public class PersonController {
                              BindingResult result) {
         if (!result.hasErrors()) {
             personService.save(person);
+        }else {
+            return "add";
         }
         return "redirect:/people";
     }

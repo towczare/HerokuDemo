@@ -18,9 +18,11 @@
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input id="name" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{name}" />
+                        <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
 
                         <label for="age">Age</label>
                         <input type="number" step="1" id="age" class="form-control" th:field="*{age}" />
+                        <div th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</div>
 
 
                         <label for="image">Age</label>
